@@ -78,6 +78,7 @@ function init_map() {
               + '<div id="img"><a href=' + features[0].get('href') + ' target="_blank"><img src="' + features[0].get('img')+'"></a></div>'
               +'</div>');
 
+              console.log(features[0]);
             overlay.setPosition(coordinate);
             content.innerHTML = info[0];
             // food_info.innerHTML = info[0];
@@ -124,5 +125,17 @@ function init_map() {
 
 // zoom の指定。view に対して指定する。
     view.setZoom(initZoom);
+
+    if(selected) {
+      console.log(selected);
+      overlay.setPosition([15710460.72202236, 4678858.59807794]);
+      content.innerHTML = '<div id="wp_desc" style="font-size:12px; width:215px">'+
+        '<div id="name">フード：' + selected['name'] + "</div>"
+        + '<div id="like">いいね：' + selected['like']+'</div>'
+        // + '<div id="time">' + features[0].get('time')+'</div>'
+        + '<div id="img"><a href=' + selected['href'] + ' target="_blank"><img src="' + selected['img']+'"></a></div>'
+        +'</div>';
+      container.style.display = 'block';
+    }
 
 }

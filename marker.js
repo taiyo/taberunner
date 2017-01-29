@@ -7,7 +7,6 @@ function getJSON(url) {
   req.send();
   if(req.readyState == 4 && req.status == 200){
     var data = JSON.parse(req.responseText);
-    console.log(data);
     return data;
   }
 }
@@ -52,19 +51,24 @@ var foods = getJSON("data/food.json");
 var datas = getJSON("https://k990dbgtb0.execute-api.ap-northeast-1.amazonaws.com/prod/likes?userid=" + userid);
 
 var features = [];
+var selected;
 for(var key in foods) {
   var food = foods[key];
   var data = datas[key];
-  var markerFeature = new ol.Feature({
+  var prop = {
     geometry: new ol.geom.Point(convertCoordinate(food["lon"], food["lat"])),
     name: food["name"],
     like: data["likes"],
     // time: data["time"],
     img: food["img"],
     href: food["href"]
-  });
+  };
+  var markerFeature = new ol.Feature(prop);
   if (data["liked"]) {
     markerFeature.setStyle(marked);
+    console.log("selected");
+    console.log(marked);
+    selected = prop;
   } else {
     if(data["likes"] > 5) {
       markerFeature.setStyle(defaultBig);
