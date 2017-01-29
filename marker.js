@@ -23,7 +23,7 @@ var defaultBig = new ol.style.Style({
     anchorXUnits: 'fraction',
     anchorYUnits: 'fraction',
     opacity: 0.75,
-    src: 'icon/big.png'
+    src: 'icon/normal-lg.png'
   })
 });
 
@@ -33,7 +33,7 @@ var defaultSmall = new ol.style.Style({
     anchorXUnits: 'fraction',
     anchorYUnits: 'fraction',
     opacity: 0.75,
-    src: 'icon/small.png'
+    src: 'icon/normal-sm.png'
   })
 });
 
@@ -43,7 +43,7 @@ var marked = new ol.style.Style({
     anchorXUnits: 'fraction',
     anchorYUnits: 'fraction',
     opacity: 0.75,
-    src: 'icon/like_big.png'
+    src: 'icon/like-lg.png'
   })
 });
 
