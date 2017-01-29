@@ -10,7 +10,8 @@
     "name":"あぶら麩丼",
     "lat":38.69982133,
     "lon":141.12941836,
-    "img":"food/aburafudon.jpg"
+    "img":"food/aburafudon.jpg",
+    "href":"http://www.aburafudon.com/"
   },
   "3":{
     "name":"笹かま",

@@ -129,6 +129,7 @@ function init_map() {
     if(selected) {
       console.log(selected);
       overlay.setPosition([15710460.72202236, 4678858.59807794]);
+      console.log(selected);
       content.innerHTML = '<div id="wp_desc" style="font-size:12px; width:215px">'+
         '<div id="name">フード：' + selected['name'] + "</div>"
         + '<div id="like">いいね：' + selected['like']+'</div>'
