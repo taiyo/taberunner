@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<description>
+    <![CDATA[<p>菊水山～摩耶山2014</p><p><a href="http://xxx.yyy.zzz">web site</a></p>]]>
+</description>
+<Style id="StartIcon">
+    <IconStyle>
+        <scale>1</scale>
+        <Icon><href>http://maps.gstatic.com/intl/ja_jp/mapfiles/ms/micons/hiker.png</href></Icon>
+        <hotSpot x="16" y="2" xunits="pixels" yunits="pixels"/>
+    </IconStyle>
+</Style>
+<Style id="EndIcon">
+    <IconStyle>
+        <scale>1</scale>
+        <Icon><href>http://maps.gstatic.com/intl/ja_jp/mapfiles/ms/micons/red-pushpin.png</href></Icon>
+        <hotSpot x="10" y="1" xunits="pixels" yunits="pixels"/>
+    </IconStyle>
+</Style>
+<Style id="PhotoIcon">
+    <IconStyle>
+        <scale>1</scale>
+        <Icon><href>http://maps.gstatic.com/intl/ja_jp/mapfiles/ms/micons/flag.png</href></Icon>
+        <hotSpot x="16" y="6" xunits="pixels" yunits="pixels"/>
+    </IconStyle>
+</Style>
+<Folder>
+<name>Icons_on_the_Map</name>
+    <Placemark>
+        <name><![CDATA[<div id="wp_name">スタート</div>]]></name>
+        <description><![CDATA[<div id="wp_time_info">2014/09/15 10:52:35</div>]]></description>
+        <styleUrl>#StartIcon</styleUrl>
+        <Point><coordinates>141.13355958,38.69173414,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+        <name><![CDATA[<div id="wp_name">フカヒレスープ</div><div id="wp_like">いいね：11</div>]]></name>
+        <description><![CDATA[<div id="wp_time_info">2014/09/15 10:53:04</div><div id="wp_photo_info"><a href="./P1110839.html" target="_blank"><img src="food/fukahire.jpg"></a> </div>]]></description>
+        <styleUrl>#PhotoIcon</styleUrl>
+        <Point><coordinates>141.15422342,38.70665348,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+        <name><![CDATA[<div id="wp_name">あぶら麩</div><div id="wp_like">いいね：22</div>]]></name>
+        <description><![CDATA[<div id="wp_time_info">2014/09/15 10:53:04</div><div id="wp_photo_info"><a href="./P1110839.html" target="_blank"><img src="food/aburafudon.jpg"></a> </div>]]></description>
+        <styleUrl>#PhotoIcon</styleUrl>
+        <Point><coordinates>141.12941836,38.69982133,0</coordinates></Point>
+    </Placemark>
+    <Placemark>
+        <name><![CDATA[<div id="wp_name">ゴール</div>]]></name>
+        <description><![CDATA[<div id="wp_time_info">2014/09/15 17:09:02</div>]]></description>
+        <styleUrl>#EndIcon</styleUrl>
+        <Point><coordinates>141.13318418,38.69168219,0</coordinates></Point>
+    </Placemark>
+</Folder>
+</Document>
+</kml>

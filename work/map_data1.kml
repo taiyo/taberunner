@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<description>
+    <![CDATA[<p>菊水山～摩耶山2014</p><p><a href="http://xxx.yyy.zzz">web site</a></p>]]>
+</description>
+<Style id="Line_1">
+    <LineStyle>
+        <color>ff0000ff</color>
+        <width>3</width>
+    </LineStyle>
+</Style>
+<Folder>
+    <name>Tracks</name>
+    <Placemark>
+        <name>Track 1</name>
+        <description><![CDATA[Original tracking filename : LOG00492.nma<br>From: 34.69,135.14<br>  To: 34.71,135.21]></description>
+        <styleUrl>#Line_1</styleUrl>
+        <LineString>
+            <extrude>0</extrude>
+            <tessellate>1</tessellate>
+            <altitudeMode>clampToGround</altitudeMode>
+            <coordinates>
+                135.145456666667,34.69276,182.9
+                135.145503333333,34.6927733333333,181.6
+                135.14571,34.6927833333333,168.8
+                135.1459,34.6927066666667,160.3
+                135.146138333333,34.69277,158.2
+                135.146196666667,34.6929933333333,155.3
+                135.1464,34.6930033333333,158.4
+                135.146621666667,34.69311,161.1
+                135.147,34.6930316666667,164.6
+                135.147153333333,34.6929166666667,166.5
+                135.147426666667,34.6929216666667,168.6
+            </coordinates>
+        </LineString>
+    </Placemark>
+</Folder>
+</Document>
+</kml>

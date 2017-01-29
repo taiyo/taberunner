@@ -1,0 +1,21 @@
+{
+  "1":{
+    "name":"フカヒレスープ",
+    "lat":38.70665348,
+    "lon":141.15422342,
+    "img":"food/fukahire.jpg",
+    "href":"https://www.tanomail.com/product/2615184/"
+  },
+  "2":{
+    "name":"あぶら麩丼",
+    "lat":38.69982133,
+    "lon":141.12941836,
+    "img":"food/aburafudon.jpg"
+  },
+  "3":{
+    "name":"笹かま",
+    "lat":38.69297970,
+    "lon":141.11166000,
+    "img":"food/sasakama.jpg"
+  }
+}
