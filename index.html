@@ -38,24 +38,26 @@
    .ol-popup-closer { text-decoration: none; position: absolute; top: 2px; right: 8px; }
    .ol-popup-closer:after { content: " ✖ "; }
 </style>
-<title>OpenLayers 3 Example: KML Layer Popup</title>
+<title>食べランナー</title>
 <script src="marker.js" type="text/javascript"></script>
 <script src="ol3.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
 </head>
 
 <body onload="init_map()">
-<div id="map_canvas" style="width: 100%; height: 97%; position:absolute; top:25px; left:0px; font-size:100%;">
+<div id="map_canvas" style="width: 100%; height: 67%; position:absolute; top:25px; left:0px; font-size:100%;">
   <div id="popup" class="ol-popup">
     <a href="#" id="popup-closer" class="ol-popup-closer"></a>
     <div id="popup-content"></div>
   </div>
 </div>
-&nbsp;マウスがクリックされた座標：<span id="outStr"></span>
+<h3>Run Course</h3>
+<!-- &nbsp;Run Course：<span id="outStr"></span> -->
 
-<!-- <div id="food_info" style="width: 100%; height: 20%; position:absolute; top:80%; left:0px; font-size:100%;">
-  <h1>test</h1>
-</div> -->
+<div id="food_rank" style="width: 100%; height: 30%; position:absolute; top:70%; left:0px; font-size:100%;">
+  <h3>Ranking</h3>
+  <img src="food/aburafudon.jpg"/><img src="food/fukahire.jpg"/><img src="food/sasakama.jpg"/>
+</div>
 
 </body>
 </html>
