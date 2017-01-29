@@ -1,3 +1,5 @@
+userid=1
+
 // 本当は非同期でやりたいけどデモなのでこのまま
 function getJSON(url) {
   var req = new XMLHttpRequest();
@@ -5,6 +7,7 @@ function getJSON(url) {
   req.send();
   if(req.readyState == 4 && req.status == 200){
     var data = JSON.parse(req.responseText);
+    console.log(data);
     return data;
   }
 }
@@ -14,28 +17,39 @@ function convertCoordinate(longitude, latitude) {
 }
 
 // デフォルトのスタイル
-var markerStyleDefault = new ol.style.Style({
+var defaultBig = new ol.style.Style({
   image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ {
     anchor: [0.5, 1],
     anchorXUnits: 'fraction',
     anchorYUnits: 'fraction',
     opacity: 0.75,
-    src: 'http://maps.gstatic.com/intl/ja_jp/mapfiles/ms/micons/flag.png'
+    src: 'icon/big.png'
   })
 });
 
-var markerStyleMark = new ol.style.Style({
+var defaultSmall = new ol.style.Style({
   image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ {
     anchor: [0.5, 1],
     anchorXUnits: 'fraction',
     anchorYUnits: 'fraction',
     opacity: 0.75,
-    src: 'http://maps.gstatic.com/intl/ja_jp/mapfiles/ms/micons/info.png'
+    src: 'icon/small.png'
+  })
+});
+
+var marked = new ol.style.Style({
+  image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ {
+    anchor: [0.5, 1],
+    anchorXUnits: 'fraction',
+    anchorYUnits: 'fraction',
+    opacity: 0.75,
+    src: 'icon/like_big.png'
   })
 });
 
 var foods = getJSON("data/food.json");
-var datas = getJSON("data/test.json");
+// var datas = getJSON("data/test.json");
+var datas = getJSON("https://k990dbgtb0.execute-api.ap-northeast-1.amazonaws.com/prod/likes?userid=" + userid);
 
 var features = [];
 for(var key in foods) {
@@ -44,13 +58,19 @@ for(var key in foods) {
   var markerFeature = new ol.Feature({
     geometry: new ol.geom.Point(convertCoordinate(food["lon"], food["lat"])),
     name: food["name"],
-    like: data["like"],
-    time: data["time"],
+    like: data["likes"],
+    // time: data["time"],
     img: food["img"],
     href: food["href"]
   });
-  if (data["mark"]) {
-    markerFeature.setStyle(markerStyleMark);
+  if (data["liked"]) {
+    markerFeature.setStyle(marked);
+  } else {
+    if(data["likes"] > 5) {
+      markerFeature.setStyle(defaultBig);
+    } else {
+      markerFeature.setStyle(defaultSmall);
+    }
   }
   features.push(markerFeature);
 }
@@ -63,5 +83,5 @@ var markerSource = new ol.source.Vector({
 // Source を Layer にセット
 var markerLayer = new ol.layer.Vector({
   source: markerSource,
-  style: markerStyleDefault
+  style: defaultSmall
 });

@@ -65,7 +65,6 @@ function init_map() {
     });
 
     function displayFeatureInfo(pixel, coordinate) {
-        console.log("disp");
         var features = [];
         map.forEachFeatureAtPixel(pixel, function(feature, wp_layer) {
             features.push(feature);
@@ -75,7 +74,7 @@ function init_map() {
             info.push('<div id="wp_desc" style="font-size:12px; width:215px">'+
               '<div id="name">フード：' + features[0].get('name') + "</div>"
               + '<div id="like">いいね：' + features[0].get('like')+'</div>'
-              + '<div id="time">' + features[0].get('time')+'</div>'
+              // + '<div id="time">' + features[0].get('time')+'</div>'
               + '<div id="img"><a href=' + features[0].get('href') + ' target="_blank"><img src="' + features[0].get('img')+'"></a></div>'
               +'</div>');
 
